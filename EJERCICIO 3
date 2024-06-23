@@ -1,0 +1,48 @@
+#include <iostream>
+
+/* cuatro enteros entre 0 y 100 representan las puntuaciones de un estudiante en un curso de informática. Escribe un programa para encontrar la media de estas puntuaciones y visualizar una tabla de notas */
+
+int main(int argc, char** argv) {
+	
+
+    int nota1, nota2, nota3, nota4;
+    double media;
+    char puntuacion;
+
+
+    std::cout << "Ingrese la primera puntuacion (entre 0 y 100): ";
+    std::cin >> nota1;
+    std::cout << "Ingrese la segunda puntuacion (entre 0 y 100): ";
+    std::cin >> nota2;
+    std::cout << "Ingrese la tercera puntuacion (entre 0 y 100): ";
+    std::cin >> nota3;
+    std::cout << "Ingrese la cuarta puntuacion (entre 0 y 100): ";
+    std::cin >> nota4;
+
+
+    media = (nota1 + nota2 + nota3 + nota4) / 4.0;
+
+
+    if (media >= 90 && media <= 100) {
+        puntuacion = 'A';
+    } else if (media >= 80 && media < 90) {
+        puntuacion = 'B';
+    } else if (media >= 70 && media < 80) {
+        puntuacion = 'C';
+    } else if (media >= 60 && media < 70) {
+        puntuacion = 'D';
+    } else {
+        puntuacion = 'E';
+    }
+
+
+    std::cout << "Tabla de notas:" << std::endl;
+    std::cout << "Nota 1: " << nota1 << std::endl;
+    std::cout << "Nota 2: " << nota2 << std::endl;
+    std::cout << "Nota 3: " << nota3 << std::endl;
+    std::cout << "Nota 4: " << nota4 << std::endl;
+    std::cout << "Media: " << media << std::endl;
+    std::cout << "Puntuacion: " << puntuacion << std::endl;
+
+	return 0;
+}

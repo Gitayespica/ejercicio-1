@@ -1,0 +1,52 @@
+#include <iostream>
+
+/* Se desea leer las edades de tres de los hijos de un matrimonio y escribir la edad mayor, la menor y la media de as tres edades. */
+
+int main(int argc, char** argv) {
+
+    int edad1, edad2, edad3;
+    int edadMayor, edadMenor;
+    double media;
+
+   
+    std::cout << "Ingrese la edad del primer hijo: ";
+    std::cin >> edad1;
+    std::cout << "Ingrese la edad del segundo hijo: ";
+    std::cin >> edad2;
+    std::cout << "Ingrese la edad del tercer hijo: ";
+    std::cin >> edad3;
+
+   
+    if (edad1 >= edad2 && edad1 >= edad3) {
+        edadMayor = edad1;
+        if (edad2 <= edad3) {
+            edadMenor = edad2;
+        } else {
+            edadMenor = edad3;
+        }
+    } else if (edad2 >= edad1 && edad2 >= edad3) {
+        edadMayor = edad2;
+        if (edad1 <= edad3) {
+            edadMenor = edad1;
+        } else {
+            edadMenor = edad3;
+        }
+    } else {
+        edadMayor = edad3;
+        if (edad1 <= edad2) {
+            edadMenor = edad1;
+        } else {
+            edadMenor = edad2;
+        }
+    }
+
+
+    media = (edad1 + edad2 + edad3) / 3.0;
+
+
+    std::cout << "Edad mayor: " << edadMayor << std::endl;
+    std::cout << "Edad menor: " << edadMenor << std::endl;
+    std::cout << "Media de las edades: " << media << std::endl;
+
+	return 0;
+}

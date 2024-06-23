@@ -1,0 +1,23 @@
+#include <iostream>
+
+/*escribir un programa que lea tres enteros y emita un mensaje que indique si están o no en orden numérico */
+
+
+
+int main(int argc, char** argv) {
+
+    int a, b, c;
+
+    // Etapa de ingreso de tres números enteros al programa
+    std::cout << "Ingrese tres numeros enteros: ";
+    std::cin >> a >> b >> c;
+
+    // Etapa de verificación del orden numérico
+    if (a <= b && b <= c) {
+        std::cout << "Los numeros enteros estan en orden numerico." << std::endl;
+    } else {
+        std::cout << "Los numeros enteros no estan en orden numerico." << std::endl;
+    }
+
+	return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+
+/* escribir un programa que lea un límite máximo entero positivo, una base entera positiva, y visualice todas las potencias de la base, menores que el valor especificado límite máximo */
+
+int main(int argc, char** argv) {
+
+    int limiteMaximo, base;
+    int potencia = 1;
+
+
+    std::cout << "Ingrese un limite máximo entero positivo: ";
+    std::cin >> limiteMaximo;
+    std::cout << "Ingrese una base entera positiva: ";
+    std::cin >> base;
+
+    if (limiteMaximo <= 0 || base <= 0) {
+        std::cout << "Error: el limite máximo y la base deben ser positivos." << std::endl;
+        return 1;
+    }
+
+    std::cout << "Potencias de " << base << " menores que " << limiteMaximo << ":" << std::endl;
+    while (potencia < limiteMaximo) {
+        std::cout << potencia << " ";
+        potencia *= base;
+    }
+    std::cout << std::endl;
+
+	return 0;
+}
